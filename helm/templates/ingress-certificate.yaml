@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: profile-certificate
+  name: adventurewiki-certificate
   namespace: {{ .Values.ingress.namespace }}
 spec:
   secretName: {{ .Values.ingress.certificate.secretName }}
