@@ -3,7 +3,7 @@ kind: postgresql
 metadata:
   name: {{ .Values.clusterName }}
 spec:
-  teamId: "adventurewiki"
+  teamId: adventurewiki
   volume:
     size: 8Gi
   numberOfInstances: 1
@@ -13,11 +13,11 @@ spec:
     - login
     - superuser
     - createdb
-    adventurewiki-user:
+    adventurewikiuser:
     - login
 
   #databases: name->owner
   databases:
-    adventurewiki: adventurewiki-user
+    adventurewiki: adventurewikiuser
   postgresql:
     version: "15"
