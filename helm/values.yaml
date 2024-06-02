@@ -4,6 +4,13 @@ databaseUsername: &databaseUsername adventurewiki_user
 databasePasswordSecretName: &databasePasswordSecretName adventurewiki_user.adventurewiki-postgres-cluster.credentials.postgresql.acid.zalan.do"
 databasePasswordSecretKey: &databasePasswordSecretKey password
 
+ingress:
+  domain: mah.bensoer.com
+  namespace: traefik
+  certificate:
+    issuer: letsencrypt-dev-cluster-issuer
+    secretName: adventurewiki-certificate-secret
+
 # ========================================
 # Configuration for the wikijs subchart
 # ========================================
