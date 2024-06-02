@@ -11,7 +11,7 @@ spec:
       match: Host(`{{ .Values.ingress.domain }}`)
       priority: 10
       services:
-        - name: {{ include "debenstack-profile.fullname" . }}
+        - name: {{ include "debenstack-adventurewiki.fullname" . }}
           namespace: {{ .Release.Namespace }}
           port: {{ .Values.wiki.service.port }}
   tls:                              # [12]
