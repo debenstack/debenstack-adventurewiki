@@ -1,9 +1,9 @@
 apiVersion: "acid.zalan.do/v1"
 kind: postgresql
 metadata:
-  name: wikijs-postgres-cluster
+  name: {{ .Values.clusterName }}
 spec:
-  teamId: "wikijs"
+  teamId: "adventurewiki"
   volume:
     size: 8Gi
   numberOfInstances: 1
@@ -13,11 +13,11 @@ spec:
     - login
     - superuser
     - createdb
-    adventurewiki_user:
+    adventurewiki-user:
     - login
 
   #databases: name->owner
   databases:
-    adventurewiki: adventurewiki.adventurewiki_user
+    adventurewiki: adventurewiki-user
   postgresql:
     version: "15"
