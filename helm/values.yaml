@@ -153,7 +153,7 @@ wiki:
     ## ssl enforce SSL communication with PostgresSQL
     ## Default to false
     ##
-    # ssl: false
+    ssl: true
     ## ca Certificate of Authority
     ## Default to empty, point to location of CA
     ##
