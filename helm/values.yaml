@@ -2,7 +2,7 @@ clusterName: adventurewiki-postgres-cluster
 databaseName: &databaseName adventurewiki-db
 databaseHost: &databaseHost adventurewiki-postgres-cluster.adventurewiki.svc.cluster.local
 databaseUsername: &databaseUsername adventurewiki-user
-databasePasswordSecretName: &databasePasswordSecretName adventurewiki-user.wikijs-postgres-cluster.credentials.postgresql.acid.zalan.do
+databasePasswordSecretName: &databasePasswordSecretName adventurewiki-user.adventurewiki-postgres-cluster.credentials.postgresql.acid.zalan.do
 databasePasswordSecretKey: &databasePasswordSecretKey password
 
 ingress:
