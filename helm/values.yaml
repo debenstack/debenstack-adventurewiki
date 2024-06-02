@@ -1,5 +1,6 @@
 clusterName: adventurewiki-postgres-cluster
 databaseName: &databaseName adventurewiki_db
+databaseHost: &databaseHost wikijs-postgres-cluster.adventurewiki.svc.cluster.local
 databaseUsername: &databaseUsername adventurewiki_user
 databasePasswordSecretName: &databasePasswordSecretName "adventurewiki_user.adventurewiki-postgres-cluster.credentials.postgresql.acid.zalan.do"
 databasePasswordSecretKey: &databasePasswordSecretKey password
@@ -170,7 +171,7 @@ wiki:
     ##
     fullnameOverride: ""
 
-    postgresqlHost: nil
+    postgresqlHost: *databaseHost
     existingSecret: *databasePasswordSecretName
     existingSecretKey: *databasePasswordSecretKey
 
