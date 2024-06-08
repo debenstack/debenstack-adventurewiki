@@ -117,9 +117,15 @@ wiki:
 
   affinity: {}
 
-  volumeMounts: []
+  volumeMounts:
+    - name: config-volume
+      mountPath: /wiki/config.yml
+      subPath: config.yml
 
-  volumes: []
+  volumes:
+    - name: config-volume
+      configMap:
+        name: wiki-config
 
   # This will allow us to install locales even without internet access using a initContainer & Wiki.js "sideloading"
   sideload:
